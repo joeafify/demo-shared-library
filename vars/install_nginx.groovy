@@ -4,12 +4,12 @@ def call(){
     stages {
       stage('Installing nginx') {
         steps {
-          sh "apt install nginx -y"
+          sh "sudo apt install nginx -y"
         }
       }
       stage('Starting nginx service') {
         steps {
-          sh "systemctl start --now nginx"
+          sh "sudo systemctl start --now nginx"
         }
       }
       stage('Request a page') {
